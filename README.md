@@ -39,6 +39,7 @@
 
 #### Installing gems for rake
 1. Install the necessary gems
+
 	> gem install httparty
 
 TODO: if this gives you an error you should use http try [this](http://stackoverflow.com/questions/19150017/ssl-error-when-installing-rubygems-unable-to-pull-data-from-https-rubygems-o)
