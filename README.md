@@ -4,9 +4,11 @@
 
 #### Installing Chocolatey
 1. Run the two commands [here](https://chocolatey.org/)
+	
 	>The first command is ran in cmd.exe
-	>
+	
 	>The second is ran in powershell.exe as administrator
+
 #### Installing Necessary Packages
 1. Install [Nuget](https://chocolatey.org/packages/NuGet.CommandLine)
 	>`choco install nuget.commandline`
@@ -31,6 +33,9 @@
 
 		>$env:path += ";" + (Get-Item "Env:ProgramFiles(x86)").Value + "\Git\bin"
 
+	NOTE: This line above may not work if you are running Virtual Machine. In that case run this command
+	
+		>$env:path += ";" + (Get-Item "Env:ProgramFiles").Value + "\Git\bin"
 
 #### Installing gems for rake
 1. Install the necessary gems
@@ -41,7 +46,7 @@ TODO: if this gives you an error you should use http try [this](http://stackover
 	>sudo gem sources -r https://rubygems.org
 	>sudo gem sources -a http://rubygems.org 
 
-#### Other Powershell help
+### Local NuGet Feed
+If you would like to have NuGet packages that you don't want to share with the world. Then you can simply create a folder at `C:\LocalNuGetFeed` and add it as a Nuget source using the following command:
 
-TODO:
-1. Include how to set nuget Local folder (just copy this info from Andrew's README)
+```nuget sources add -Name Local -Source C:\LocalNuGetFeed\```
