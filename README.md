@@ -27,7 +27,8 @@
 
 2. Better powershell [git environment](https://github.com/dahlbyk/posh-git) (copy and paste this into powershell)
 
-		>(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex install-module posh-git
+		>(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
+		>install-module posh-git
 
 	Following this you will want to restart your profile by typing `.$PROFILE` (NOTE: if an error occurs cannot find `ssh-agent`then
 
