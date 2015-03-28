@@ -3,11 +3,13 @@
 ## Setting Up PowerShell
 
 #### Installing Chocolatey
-1. Run the two commands [here](https://chocolatey.org/)
+1. Run the three commands below.  [Steps 1 and 3 can be found here](https://chocolatey.org/)
 	
-	>The first command is ran in cmd.exe
+	>` @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin`
 	
-	>The second is ran in powershell.exe as administrator
+	>`Set-ExecutionPolicy RemoteSigned`
+	
+	>`iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))`
 
 #### Installing Necessary Packages
 1. Install [Nuget](https://chocolatey.org/packages/NuGet.CommandLine)
@@ -20,12 +22,7 @@
 	> `choco install git`
 
 #### Modify Powershell environment
-1. How to change Powershell permissions (Both are supposed to be valid options)
-	>`Set-ExecutionPolicy RemoteSigned`
-	
-	>`Set-ExecutionPolicy Unrestricted`
-
-2. Better powershell [git environment](https://github.com/dahlbyk/posh-git) (copy and paste this into powershell)
+1. Better powershell [git environment](https://github.com/dahlbyk/posh-git) (copy and paste this into powershell)
 
 		>(new-object Net.WebClient).DownloadString("http://psget.net/GetPsGet.ps1") | iex
 		>install-module posh-git
